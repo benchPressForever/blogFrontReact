@@ -1,0 +1,49 @@
+
+
+.mainBlockYO{
+    font-weight: 300;
+    text-shadow: 1px 1px 2px black;
+    width:100vw;
+    height:100vh;
+    color: #FFFFFF;
+    padding:20vh 20vw 10vh 5vw;
+    font-size: 20px;
+}
+
+.lastBlockYO{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 55vw;
+    height: 27vh;
+    justify-content: start;
+    align-items: center;
+}
+
+.elementYO{
+    width: auto;
+    height: 100%;
+    display: flex;
+    margin-right: 4vw;
+    justify-content:center;
+    align-items: start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstBlockYO{
+    display: flex;
+    width: 40vw;
+    height: 55vh;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+}
+
+.elementYO h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+    margin-top: 1vh;
+}
+
+
+

@@ -1,0 +1,66 @@
+
+
+.MainDivC{
+    width: 100vw;
+    height: 100vh;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    padding: 20vh 3vw 2vh 3vw;
+}
+.MainDivC h1{
+    margin: 1vh;
+}
+
+.containerC{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.firstDivC{
+    width: 45vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 2vw;
+}
+
+
+.formC{
+    width: 45vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    
+    flex-direction: column;
+    padding: 4%;
+    margin-bottom: 2vh;
+}
+
+.formC > *{
+    width: 100%;
+    height: 10%;
+    margin-top: 1vh;
+    border-radius: 2vh;
+    padding-left: 2%;
+    background-color: #e7dfdf77;
+    border:1px solid #aca9a977;
+}
+
+.formC div{
+    padding: 0; 
+}
+
+.A:link, .A:visited {
+    color: blue; /* Цвет текста ссылки */
+    text-decoration:solid; /* Убирает подчёркивание под текстом */
+}
+
