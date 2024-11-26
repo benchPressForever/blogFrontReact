@@ -4,10 +4,10 @@
     font-weight: 300;
     text-shadow: 1px 1px 2px black;
     width:100vw;
-    height:100vh;
+    height:auto;
     color: #FFFFFF;
     padding:20vh 20vw 10vh 5vw;
-    font-size: 20px;
+    font-size: 1.3vw;
 }
 
 .lastBlockYO{
@@ -19,6 +19,16 @@
     justify-content: start;
     align-items: center;
 }
+
+.lastBlockYO1200{
+    width: 90vw;
+}
+
+.lastBlockYO700{
+    font-size: 0.6rem;
+}
+
+
 
 .elementYO{
     width: auto;
@@ -38,6 +48,14 @@
     justify-content: end;
     align-items: start;
     flex-direction: column;
+}
+
+.firstBlockYO992{
+    width: 70vw;
+}
+
+.firstBlockYO992 h4{
+    margin-top: 20vh;
 }
 
 .elementYO h1,h2,h3,h4,h5,h6{

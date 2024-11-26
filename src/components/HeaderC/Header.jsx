@@ -4,8 +4,11 @@ import { CONSULTATION_ROUTE, CONTACTS_ROUTE, MAIN_ROUTE, MYINFO_ROUTE, SERVICES_
 import React from "react";
 
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { useMediaQuery } from "react-responsive";
 
 export function Header(){
+
+    const S1 = useMediaQuery({ maxWidth:1100 });
 
     React.useEffect(() => {
     
@@ -52,39 +55,81 @@ export function Header(){
             
 
             <div className="divRow">
-            <Link to = {MYINFO_ROUTE} activeClass="active"  
-                  spy={true} 
-                  smooth={true} 
-                  offset={0} 
-                  duration={500} className="item">обо мне </Link>
-   
-            <Link to = {SERVICES_ROUTE} activeClass="active"  
-                  spy={true} 
-                  smooth={true} 
-                  offset={0} 
-                  duration={500} className="item">услуги</Link>
+                {S1?
 
-            <Link to = {CONTACTS_ROUTE} activeClass="active"  
-                  spy={true} 
-                  smooth={true} 
-                  offset={0} 
-                  duration={500} className="item">контакты</Link>
+                <div class="dropdown" style = {{position:"absolute",top:"2.5vh",right:"19vw"}}>
+                    <button class="btn btn-secondary dropdown-toggle" style = {{backgroundColor:"gold",border:"0px",color:"black"}} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      меню
+                    </button>
 
-            <Link to = {CONSULTATION_ROUTE} activeClass="active"  
-                  spy={true} 
-                  smooth={true} 
-                  offset={0} 
-                  duration={500} className="item">консультация</Link>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li> <Link to = {MYINFO_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="dropdown-item">обо мне</Link></li>
 
-                <a  onClick={scrollToBottom} style = {{position:"absolute",top:"2vh",right:"2vw"}}>
+                        <li> <Link to = {SERVICES_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="dropdown-item">услуги</Link></li>
+
+                        <li> <Link to = {CONSULTATION_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="dropdown-item">консультация</Link></li> 
+
+
+                        <li> <Link to = {CONTACTS_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="dropdown-item">контакты</Link></li>
+
+                      
+                    </ul>
+
+                </div>
+
+
+                :
+                <>
+                  <Link to = {MYINFO_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="item">обо мне </Link>
+        
+                  <Link to = {SERVICES_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="item">услуги</Link>
+
+
+                  <Link to = {CONSULTATION_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="item">консультация</Link>
+
+                  <Link to = {CONTACTS_ROUTE} activeClass="active"  
+                        spy={true} 
+                        smooth={true} 
+                        offset={0} 
+                        duration={500} className="item">контакты</Link>
+                </>}
+                <a  onClick={scrollToBottom} style = {{position:"absolute",top:"2vh",right:"6vw"}}>
                     <img src="img/strelka.png" width={"40px"} height={"auto"}/>
                 </a>
-
-                
-
-                
             </div>
             
+
+
+
+
         </div>
     );
 }

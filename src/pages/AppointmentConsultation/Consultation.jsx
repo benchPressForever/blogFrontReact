@@ -3,6 +3,7 @@ import "./Consultation.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { useMediaQuery } from "react-responsive";
 
 export function Consultation(){
 
@@ -24,6 +25,9 @@ export function Consultation(){
     }
 
 
+    
+    const S1 = useMediaQuery({ maxWidth: 1050 });
+
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
@@ -31,14 +35,14 @@ export function Consultation(){
     return(
         <div className="MainDivC"> 
             <div className="containerC">
-                <div className="firstDivC">
+                <div className= {S1 ? "firstDivC1050 firstDivC" : "firstDivC"} >
                         <ScrollAnimation animateIn="fadeIn" delay={200}>
                             <h1>Записаться на консультацию</h1>
                         </ScrollAnimation>
-                    <img src = "img/13.png" width={"700px"} height={"auto"}/>
+                    <img src = "img/13.png"  />
                 </div>
 
-                <form  className = "formC" onSubmit={submitHandler}>
+                <form  className = {S1 ? "formC formC1050" : "formC" } onSubmit={submitHandler}>
                         <input 
                             required
                             type="text" 
@@ -82,7 +86,7 @@ export function Consultation(){
                             onChange={e => setMessage(e.target.value)}/><br/>
 
                         <div style = {{display:"flex",flexDirection:"row",justifyContent:"space-between",backgroundColor:"white",border:"0px solid black",alignItems:"center"}}>
-                            <button type = "submit" style = {{height:"100%",borderRadius:"10px",border:"0px",backgroundColor:"gold",padding:"3%"}} >Отправить</button>
+                            <button type = "submit" style = {{height:"70%",borderRadius:"10px",border:"0px",backgroundColor:"gold",padding:"1% 3% 1% 3%"}} >Отправить</button>
                             <div onClick={scrollToTop} style = {{color:"blue",borderBottom:"1px solid blue"}}>Вернуться обратно</div>
                         </div>
                     </form>

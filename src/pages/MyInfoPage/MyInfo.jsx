@@ -4,64 +4,52 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css"
 
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { useMediaQuery } from "react-responsive";
 
 
 
 export function MyInfo(){
 
+    const S1 = useMediaQuery({ maxWidth: 992 });
+    const S2 = useMediaQuery({ maxWidth: 620 });
+    const S3 = useMediaQuery({ maxWidth: 450 });
 
     return(
-    <div className="MainBlock">
-        <div className="firstBlock">
+    <div className="MainBlock" style = {{fontSize: S3 ? "12px" : S2 ? "14px" : S1 ? "16px" : "1.3em"}}>
+        <div className= {"firstBlock" }>
         <ScrollAnimation animateIn="fadeIn" >
-                <div style = {{color:"white",fontSize:"1.7vw"}}>
-                Юрист  высшей <br/>категории 
-                </div>
+            <div style = {{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:"2vh",flexWrap: S1 ? "wrap" : "nowrap"}}>
+                <h4 style = {{color:"white"}}>
+                Юрист  высшей {S1 ? undefined  :<br/>}категории 
+                </h4>
+                <h1 style = {{color:"gold",marginTop:"1vh"}}>
+                    Иван Кутырин
+                </h1>
+            </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="fadeIn" >
-        <div style = {{position:"absolute",top:"50vh",left:"25vw",color:"gold",fontSize:"4vw"}}>
-            Иван Кутырин
-        </div>
-        </ScrollAnimation>
 
         <ScrollAnimation animateIn="fadeIn" >
-            <p style={{color:"#898989",fontWeight:"400",fontSize:"1.2vw"}}>
+            <p style={{color:"#898989",fontWeight:"400"}}>
             Иван Кутырин обладает обширным опытом в
              области гражданского права.
             Он является экспертом в своей области и имеет более 10 лет практического опыта. В процессе 
             своей карьеры он успешно представлял интересы клиентов в различных юридических вопросах, включая 
             арбитражные споры, банкротство, регистрация и оформление сделок, взыскание долгов, строительные подряды.
             <br/><br/>
-            <span style = {{fontSize:"1.2vw",color:"gold"}}> 
+            <span style = {{color:"gold"}}> 
                 Гарантирует реалистическую оценку перспективам дела и защиту вашего бизнеса.
             </span>
             </p>
         </ScrollAnimation>
         </div>
-        <div className="secondBlock">
-                <img style = {{objectFit:"fill"}} src="img/men2.png" width={"auto"} height={"100%"} />
+
+        <div className= {"secondBlock"}>
+                <img style = {{objectFit:"cover"}} src="img/men2.png" width={"100%"} height={"100%"} />
         </div>
 
 
-        <div className="lastBlock">
-            
-                <ScrollAnimation animateIn="fadeIn" >
-                    <div className="Block"  style = {{backgroundColor:"gold",color:"black",position:"absolute",top:"10vh",right:"0",height:"10vh"}}>
-                        +79278826745
-                    </div>
-                </ScrollAnimation>
-            
-            <div className="Block">
-                <img className="effect" src="img/telega.png" width={"30%"} height={"auto"}/>
-            </div>
-            <div className="Block">
-                <img className="effect" src="img/wat.png" width={"30%"} height={"auto"}/>
-            </div>
-            <div className="Block">
-                <img className="effect" src="img/vk.png" width={"30%"} height={"auto"}/>
-            </div>
-        </div>
+        
         
     </div>
     );

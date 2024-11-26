@@ -4,7 +4,7 @@
    display: flex;
    position: fixed;
    flex-direction: row;
-   height: 10vh;
+   height: 11vh;
    width: 100vw;
    background-color: white;
    justify-content: space-around;
@@ -35,11 +35,35 @@
     text-align: center;
     border-bottom: 0 solid gold; /* Параметры линии снизу */
     transition: 0.2s;
+    color: inherit; /* Цвет текста ссылки */
+    text-decoration: none; /* Убирает подчёркивание под текстом */
 }
 
 .item:hover{
     border-bottom-width: 3px;
 }
 
+a:link, a:visited {
+    color: inherit; /* Цвет текста ссылки */
+    text-decoration: none; /* Убирает подчёркивание под текстом */
+  }
+  a:hover, a:active {
+    color: inherit; /* Цвет текста ссылки при наведении и нажатии */
+}
+
+li , li:active , li:visited ,li:hover{
+    background-color: white;
+}
+
+.dropdown-item.active{
+    background-color: gold;
+}
 
 
+.dropdown-item:hover {
+    background-color: gold;
+    }
+    
+.dropdown-item.active, .dropdown-item:active {
+    background-color: gold;
+}

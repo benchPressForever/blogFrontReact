@@ -6,7 +6,6 @@ body {
     font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.2vw;
   display: block;
   overflow-x:hidden;
 
@@ -28,3 +27,16 @@ a:hover, a:active {
 }
 
 
+@media (max-width > 1px) {
+  h1{
+      color: black;
+
+  }
+}
+
+@media screen and(max-device-width > 1px) {
+  .h1{
+    color: black;
+
+  }
+}

@@ -8,12 +8,14 @@ import { CONSULTATION_ROUTE, CONTACTS_ROUTE, MAIN_ROUTE, MYINFO_ROUTE, SERVICES_
 import { WorkE } from "./pages/workExperience/workExp";
 import { Consultation } from "./pages/AppointmentConsultation/Consultation";
 import { Contacts } from "./pages/ContactsPage/Contacts";
+import "./index.css"
 
 function App() {
 
 
   return (
     <div>
+      
       <Header/>  
 
       <Element name = {MAIN_ROUTE}>
@@ -25,8 +27,10 @@ function App() {
       </Element>
 
       <Element name = {MYINFO_ROUTE}>
-        <MyInfo/>   
+        <MyInfo/>
       </Element>
+
+   
 
       <Element name = {CONSULTATION_ROUTE}>
         <Consultation />
@@ -35,11 +39,7 @@ function App() {
       <Element name = {CONTACTS_ROUTE}>
         <Contacts/>
       </Element>
-      
-      
-
-      
-       
+  
     </div>
   );
 }
