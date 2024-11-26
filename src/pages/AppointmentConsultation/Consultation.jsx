@@ -84,7 +84,7 @@ export function Consultation(){
                             placeholder="Опишите суть обращения" 
                             value = {message} 
                             onChange={e => setMessage(e.target.value)}/><br/>
-
+                        
                         <div style = {{display:"flex",flexDirection:"row",justifyContent:"space-between",backgroundColor:"white",border:"0px solid black",alignItems:"center"}}>
                             <button type = "submit" style = {{height:"70%",borderRadius:"10px",border:"0px",backgroundColor:"gold",padding:"1% 3% 1% 3%"}} >Отправить</button>
                             <div onClick={scrollToTop} style = {{color:"blue",borderBottom:"1px solid blue"}}>Вернуться обратно</div>

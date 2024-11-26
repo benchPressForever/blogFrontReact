@@ -7,9 +7,10 @@ export function WorkE(){
     const S1 = useMediaQuery({ maxWidth: 1200 });
     const S2 = useMediaQuery({ maxWidth: 992 });
     const S3 = useMediaQuery({ maxWidth: 700 });
+    const S4 = useMediaQuery({ maxWidth: 500 });
 
     return(
-        <div className="mainBlockYO" style = {{backgroundImage:"url(img/bacYO4.png)",backgroundSize:"100% 100%",objectFit:"cover"}}>
+        <div className="mainBlockYO" style = {{backgroundImage:"url(img/bacYO4.png)",backgroundSize:"100% 100%",objectFit:"cover",height:S4 ? "100vh" : "auto"}}>
             <div className= {S2 ? "firstBlockYO firstBlockYO992" : "firstBlockYO"} >
                 <ScrollAnimation animateIn="fadeIn" delay={400}>
                     <h1>ЮРИДИЧЕСКАЯ ПОМОЩЬ</h1>

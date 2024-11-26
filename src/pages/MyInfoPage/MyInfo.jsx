@@ -12,11 +12,17 @@ export function MyInfo(){
 
     const S1 = useMediaQuery({ maxWidth: 992 });
     const S2 = useMediaQuery({ maxWidth: 620 });
-    const S3 = useMediaQuery({ maxWidth: 450 });
+    const S3 = useMediaQuery({ maxWidth: 500 });
 
     return(
     <div className="MainBlock" style = {{fontSize: S3 ? "12px" : S2 ? "14px" : S1 ? "16px" : "1.3em"}}>
-        <div className= {"firstBlock" }>
+
+        {S3 ?
+        <div className= {"secondBlock"} style = {{width:"100vw",height:"auto"}}>
+                <img style = {{objectFit:"cover"}} src="img/men2.png" width={"100%"} height={"100%"} />
+        </div> : undefined}
+
+        <div className= {S3 ? "firstBlock450" : "firstBlock"} >
         <ScrollAnimation animateIn="fadeIn" >
             <div style = {{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:"2vh",flexWrap: S1 ? "wrap" : "nowrap"}}>
                 <h4 style = {{color:"white"}}>
@@ -44,9 +50,11 @@ export function MyInfo(){
         </ScrollAnimation>
         </div>
 
-        <div className= {"secondBlock"}>
+        {S3 ? undefined :
+
+        <div className= {"secondBlock"} >
                 <img style = {{objectFit:"cover"}} src="img/men2.png" width={"100%"} height={"100%"} />
-        </div>
+        </div>}
 
 
         

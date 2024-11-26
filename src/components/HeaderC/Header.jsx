@@ -57,36 +57,36 @@ export function Header(){
             <div className="divRow">
                 {S1?
 
-                <div class="dropdown" style = {{position:"absolute",top:"2.5vh",right:"19vw"}}>
-                    <button class="btn btn-secondary dropdown-toggle" style = {{backgroundColor:"gold",border:"0px",color:"black"}} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <div className="dropdown" style = {{position:"absolute",top:"2.5vh",right:"19vw"}}>
+                    <button className="btn btn-secondary dropdown-toggle" style = {{backgroundColor:"gold",border:"0px",color:"black"}} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       меню
                     </button>
 
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li> <Link to = {MYINFO_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="dropdown-item">обо мне</Link></li>
+                        duration={300} className="dropdown-item">обо мне</Link></li>
 
                         <li> <Link to = {SERVICES_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="dropdown-item">услуги</Link></li>
+                        duration={300} className="dropdown-item">услуги</Link></li>
 
                         <li> <Link to = {CONSULTATION_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="dropdown-item">консультация</Link></li> 
+                        duration={300} className="dropdown-item">консультация</Link></li> 
 
 
                         <li> <Link to = {CONTACTS_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="dropdown-item">контакты</Link></li>
+                        duration={300} className="dropdown-item">контакты</Link></li>
 
                       
                     </ul>
@@ -100,26 +100,26 @@ export function Header(){
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="item">обо мне </Link>
+                        duration={300} className="item">обо мне </Link>
         
                   <Link to = {SERVICES_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="item">услуги</Link>
+                        duration={300} className="item">услуги</Link>
 
 
                   <Link to = {CONSULTATION_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
-                        offset={0} 
-                        duration={500} className="item">консультация</Link>
+                        offset={100} 
+                        duration={300} className="item">консультация</Link>
 
                   <Link to = {CONTACTS_ROUTE} activeClass="active"  
                         spy={true} 
                         smooth={true} 
                         offset={0} 
-                        duration={500} className="item">контакты</Link>
+                        duration={300} className="item">контакты</Link>
                 </>}
                 <a  onClick={scrollToBottom} style = {{position:"absolute",top:"2vh",right:"6vw"}}>
                     <img src="img/strelka.png" width={"40px"} height={"auto"}/>
