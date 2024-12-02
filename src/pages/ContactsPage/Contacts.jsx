@@ -33,16 +33,16 @@ export function Contacts(){
                     <div className="RowDiv">
                         <img src = "img/email.png"/>
                         <ScrollAnimation animateIn="fadeIn" delay={500}>
-                            <p>ivan@mail.ru</p>
+                            <p>Saenko-kursk@mail.ru</p>
                         </ScrollAnimation>
                     </div>
                     <br/><br/>
 
 
                     <div className="lineImg">
-                        <a href="https://vk.com/kurskadm"  target="_blank"><img src = "img/vk1.png"/></a>
+                        <a href="https://vk.com/id609725624"  target="_blank"><img src = "img/vk1.png"/></a>
                         <a href=""><img src = "img/watsap.png"  target="_blank"/></a>
-                        <a href="https://t.me/s/kurskadm"  target="_blank"><img src = "img/telegram.png"/></a>  
+                        <a href=""  target="_blank"><img src = "img/telegram.png"/></a>  
                     </div>
                 </div>
 

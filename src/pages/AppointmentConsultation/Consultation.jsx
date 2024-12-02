@@ -35,16 +35,19 @@ export function Consultation(){
         scroll.scrollToTop();
     };
 
+
+
     const [fio,setFio] = React.useState("");
     const [number,setNumber] = React.useState("");
     const [email,setEmail] = React.useState("")
     const {Service} = useSelector(state => state.Cons)
     const [message,setMessage] = React.useState('')
 
+    console.log(Service)
+
     const [fioDirty,setFioDirty] = React.useState(false);
     const [numberDirty,setNumberDirty] = React.useState(false);
     const [emailDirty,setEmailDirty] = React.useState(false)
-    const [serviceDirty,setServiceDirty] = React.useState(true)
     const [messageDirty,setMessageDirty] = React.useState(false)
 
     const [clickCheckBox,setClickCheckBox] = React.useState(false)
@@ -52,7 +55,6 @@ export function Consultation(){
     const [fioError,setFioError] = React.useState("ФИО не может быть пустым");
     const [numberError,setNumberError] = React.useState("Телефон не может быть пустым");
     const [emailError,setEmailError] = React.useState("Email не может быть пустым")
-    const [serviceError,setServiceError] = React.useState("Услуга не выбрана")
     const [messageError,setMessageError] = React.useState("Сообщение не может быть пустым")
 
     const [formValid,setFormValid] = React.useState(false)
@@ -60,13 +62,13 @@ export function Consultation(){
     const dispatch = useDispatch()
 
     React.useEffect(()=>{
-        if(fioError || numberError || emailError || serviceError || messageError || !clickCheckBox){
+        if(fioError || numberError || emailError  || messageError || !clickCheckBox){
             setFormValid(false);
         }
         else{
             setFormValid(true);
         }
-    },[fioError,numberError,emailError,serviceError,messageError,clickCheckBox]);
+    },[fioError,numberError,emailError,messageError,clickCheckBox]);
 
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -127,12 +129,6 @@ export function Consultation(){
 
     const serviceHandler = (e) => {
         dispatch(ChangeService(e.target.value))
-        if(!e.target.value){
-            setServiceError("Услуга не выбрана") 
-        }
-        else{
-            setServiceError("")    
-        }
     }
 
     const messageHandler = (e) => {
@@ -159,9 +155,6 @@ export function Consultation(){
                 break;
             case "number":
                 setNumberDirty(true)
-                break;
-            case "service":
-                setServiceDirty(true)
                 break;
             case "message":
                 setMessageDirty(true)
@@ -230,8 +223,6 @@ export function Consultation(){
                             <option value="Сопровождение сделок с недвижимостью">Сопровождение сделок с недвижимостью</option>
                         </select><br/>
 
-                        {(serviceError&&serviceDirty )&& <div className="Error">{serviceError}</div>}
-
                         <textarea
                             required
                             name = "message"
@@ -253,7 +244,7 @@ export function Consultation(){
                         </label>
 
                         <div style = {{display:"flex",flexDirection:"row",justifyContent:"space-between",backgroundColor:"white",border:"0px solid black",alignItems:"center"}}>
-                            <button type = "submit" disabled = {!formValid} style = {{height:"70%",borderRadius:"10px",border:"0px",backgroundColor:"gold",padding:"1% 3% 1% 3%"}} >Отправить</button>
+                            <button className="ButoonCons" type = "submit" disabled = {!formValid}  >Отправить</button>
                             <div onClick={scrollToTop}  style = {{color:"blue",borderBottom:"1px solid blue"}}>Вернуться обратно</div>
                         </div>
                     </form>

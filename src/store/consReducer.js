@@ -1,7 +1,7 @@
 import { createAction, createReducer } from "@reduxjs/toolkit"
 
 const defaultState = {
-    Service:"",
+    Service:"Банкротство",
     OpenModal:false,
 }
 
