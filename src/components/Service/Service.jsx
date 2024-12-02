@@ -16,7 +16,8 @@ export function Service({Url,Title,Text}) {
     const dispatch = useDispatch();
 
     const clickService = (title) => {
-        dispatch(ChangeService(title))
+        if(title == "Сопровождение сделок")dispatch(ChangeService("Сопровождение сделок с недвижимостью"))
+        else dispatch(ChangeService(title))
     }
 
 
