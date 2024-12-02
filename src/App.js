@@ -9,14 +9,27 @@ import { WorkE } from "./pages/workExperience/workExp";
 import { Consultation } from "./pages/AppointmentConsultation/Consultation";
 import { Contacts } from "./pages/ContactsPage/Contacts";
 import "./index.css"
+import { Modal } from "./components/ModalWindow/Modal";
+import { useSelector } from "react-redux";
+import React from "react";
 
 function App() {
 
+  const {OpenModal} = useSelector(state => state.Cons)
+
+  React.useEffect(() => {
+    if(OpenModal){
+        document.body.style.overflowY = "hidden"   
+    }
+    else{
+        document.body.style.overflowY = "scroll"
+    }
+  },[OpenModal]);
 
   return (
-    <div>
-      
-      <Header/>  
+    <div style = {{position:"relative"}}> 
+
+      {OpenModal ? <Modal/> : <Header/> }
 
       <Element name = {MAIN_ROUTE}>
         <WorkE/> 
@@ -29,8 +42,6 @@ function App() {
       <Element name = {MYINFO_ROUTE}>
         <MyInfo/>
       </Element>
-
-   
 
       <Element name = {CONSULTATION_ROUTE}>
         <Consultation />

@@ -49,7 +49,7 @@ export function Header(){
                 <a onClick={scrollToTop}>
                 <div className="divRow">
                     <img style={{marginLeft:"2vw"}} src = "img/logo1.png" width={40} height={40}/>
-                    <div style={{marginLeft:"2vw",fontWeight:500}}>Иван Кутырин</div>
+                    <div style={{marginLeft:"2vw",fontWeight:500}}>Саенко Максим</div>
                 </div>
                 </a>
             

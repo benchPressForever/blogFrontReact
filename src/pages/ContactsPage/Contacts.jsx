@@ -1,10 +1,12 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Contacts.css"
 import { useMediaQuery } from "react-responsive";
+import { useDispatch } from "react-redux";
+import { ChangeOpenModal } from "../../store/consReducer";
 
 export function Contacts(){
 
-
+    const dispatch = useDispatch();
     const S1 = useMediaQuery({ maxWidth: 900 });
 
     return(
@@ -19,13 +21,13 @@ export function Contacts(){
                     <div className="RowDiv">
                         <img src = "img/telefone.png" />
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
-                            <p>+79275353453</p>
+                            <p>+7-910-210-96-94</p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
                         <img src="img/map.png" />
                         <ScrollAnimation animateIn="fadeIn" delay={400}>
-                            <p>г,Москва , ул.Ташкентская д.34</p>
+                            <p>Российская Федерация, 305007, город Курск ул. Дейнеки д. 5е к.7</p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
@@ -33,28 +35,30 @@ export function Contacts(){
                         <ScrollAnimation animateIn="fadeIn" delay={500}>
                             <p>ivan@mail.ru</p>
                         </ScrollAnimation>
-                    </div><br/><br/>
+                    </div>
+                    <br/><br/>
+
 
                     <div className="lineImg">
-                        <img src = "img/vk1.png"/>
-                        <img src = "img/watsap.png"/>
-                        <img src = "img/telegram.png"/>   
+                        <a href="https://vk.com/kurskadm"  target="_blank"><img src = "img/vk1.png"/></a>
+                        <a href=""><img src = "img/watsap.png"  target="_blank"/></a>
+                        <a href="https://t.me/s/kurskadm"  target="_blank"><img src = "img/telegram.png"/></a>  
                     </div>
                 </div>
 
                 <div className= {S1 ? "Map900" : "Map"}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6063439302325!2d37.797727990223244!3d55.695831503608645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5c0d976578d%3A0x8059ec460349a70a!2z0KLQsNGI0LrQtdC90YLRgdC60LDRjyDRg9C7LiwgMzQsINCc0L7RgdC60LLQsCwgMTA5NDcy!5e0!3m2!1sru!2sru!4v1732324491020!5m2!1sru!2sru" 
-                        width="100%" 
-                        height="100%" 
-                        style={{border:0}} 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.420550361664!2d36.138597755859976!3d51.70847286760802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412f033bf6c76e5b%3A0x4f4c9a1633f5ff8!2z0YPQuy4g0JTQtdC50L3QtdC60LgsIDXQlSwg0JrRg9GA0YHQuiwg0JrRg9GA0YHQutCw0Y8g0L7QsdC7LiwgMzA1MDA3!5e0!3m2!1sru!2sru!4v1732985865604!5m2!1sru!2sru" 
+                                width="100%" 
+                                height="100%" 
+                                style={{border:0}} 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
             <div className="lastDivContacts">
-                Иван Кутырин ©, 2024
+                <p>Саенко Максим ©, 2024 </p> <p style = {{marginRight:"1vw",marginLeft:"1vw"}}>|</p> <p className="pol" onClick={() => dispatch(ChangeOpenModal())}>Политика конфиденциальности</p>
             </div>
         </div>
     );

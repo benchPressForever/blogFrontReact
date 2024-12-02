@@ -82,6 +82,11 @@
     margin-right: 30px;
 }
 
+.RowDiv p{
+    padding: 0;
+    margin: 0;
+}
+
 .DivContacts{
     width: 40vw;
     height: 70vh;
@@ -106,4 +111,9 @@
     text-underline-offset: 30px;
     white-space:nowrap;
     margin-bottom: 15vh;
+}
+
+.pol:hover{
+    color:gold;
+    border-bottom:1px solid gold;
 }

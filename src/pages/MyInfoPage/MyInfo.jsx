@@ -19,7 +19,7 @@ export function MyInfo(){
 
         {S3 ?
         <div className= {"secondBlock"} style = {{width:"100vw",height:"auto"}}>
-                <img style = {{objectFit:"cover"}} src="img/men2.png" width={"100%"} height={"100%"} />
+                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} />
         </div> : undefined}
 
         <div className= {S3 ? "firstBlock450" : "firstBlock"} >
@@ -29,7 +29,7 @@ export function MyInfo(){
                 Юрист  высшей {S1 ? undefined  :<br/>}категории 
                 </h4>
                 <h1 style = {{color:"gold",marginTop:"1vh"}}>
-                    Иван Кутырин
+                    Саенко Максим
                 </h1>
             </div>
         </ScrollAnimation>
@@ -37,14 +37,16 @@ export function MyInfo(){
 
         <ScrollAnimation animateIn="fadeIn" >
             <p style={{color:"#898989",fontWeight:"400"}}>
-            Иван Кутырин обладает обширным опытом в
-             области гражданского права.
-            Он является экспертом в своей области и имеет более 10 лет практического опыта. В процессе 
-            своей карьеры он успешно представлял интересы клиентов в различных юридических вопросах, включая 
-            арбитражные споры, банкротство, регистрация и оформление сделок, взыскание долгов, строительные подряды.
+            <span className="g"> Саенко Максим Леонидович</span> - опытный юрист с глубокими знаниями в области права. 
+            Он получил образование в ЧОУ ВО «Санкт-Петербургский университет технологий 
+            управления и экономики», где завершил обучение с квалификацией <span className="g">Магистр по программе юриспруденция.</span>
             <br/><br/>
-            <span style = {{color:"gold"}}> 
-                Гарантирует реалистическую оценку перспективам дела и защиту вашего бизнеса.
+            С <span className="g"> 2006 </span>года Максим активно занимается юридической деятельностью, приобретая ценнейший опыт 
+            в различных областях права.
+            Саенко Максим Леонидович – это <span className="g"> профессионал </span>, который стремится обеспечить своим клиентам надежную правовую защиту и высокое качество услуг.
+            <br/><br/>
+            <span className="g"> 
+                Гарантирует реалистическую оценку перспективам дела и защиту ваших прав.
             </span>
             </p>
         </ScrollAnimation>
@@ -53,7 +55,7 @@ export function MyInfo(){
         {S3 ? undefined :
 
         <div className= {"secondBlock"} >
-                <img style = {{objectFit:"cover"}} src="img/men2.png" width={"100%"} height={"100%"} />
+                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} />
         </div>}
 
 

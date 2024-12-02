@@ -63,5 +63,18 @@
     margin-top: 1vh;
 }
 
-
+.But{
+    background-color: gold;
+    padding: 1% 2% 1% 2%;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 25vh;
+    right: 30vw;
+    font-size: 2em;
+    color: white;
+    border:3px solid gold;
+    transition: 1s;
+    width: 40vw;
+    height: auto;
+}
 
