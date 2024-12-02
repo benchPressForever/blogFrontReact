@@ -11,7 +11,7 @@ import { ChangeService } from "../../store/consReducer";
 export function Consultation(){
 
     const sendFeedback = async () => {
-        const baseUrl = "http://localhost:8000"
+        const baseUrl = "https://d51e-217-138-198-26.ngrok-free.app/feedback"
         const dataToSend = {
             name: fio,
             phone: number,
@@ -19,8 +19,12 @@ export function Consultation(){
             type: Service,
             message: message
         }
-        
-        await axios.post(baseUrl + "/feedback", dataToSend)
+        try {  
+            await axios.post(baseUrl, dataToSend)  
+        } catch (error) {  
+            console.error('Error details:', error);  
+            console.error('Error message:', error.message);   
+        }  
         alert("Письмо успешно отправлено!");
     }
 
