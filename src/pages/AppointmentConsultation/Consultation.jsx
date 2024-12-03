@@ -11,6 +11,26 @@ import { ModalView } from "../../components/ModalView/ModalV";
 
 export function Consultation(){
 
+    const clear = () =>{
+        setEmail("")
+        setFio("")
+        setMessage("")
+        setNumber("")
+
+        setFormValid(false)
+
+        setFioDirty(false)
+        setNumberDirty(false)
+        setMessageDirty(false)
+        setNumberDirty(false)
+
+        setFioError("ФИО не может быть пустым");
+        setNumberError("Телефон не может быть пустым");
+        setEmailError("Email не может быть пустым")
+        setMessageError("Сообщение не может быть пустым")
+
+    }
+
     const sendFeedback = async () => {
         const baseUrl = "https://formtomail-nicolas0708.amvera.io/feedback"
         const dataToSend = {
@@ -20,15 +40,18 @@ export function Consultation(){
             type: Service,
             message: message
         }
+
+        clear()
+
         try {  
             await axios.post(baseUrl, dataToSend)  
-            dispatch(ChangeModalViewOpen())
             setMailSend(true)
+            dispatch(ChangeModalViewOpen())
         } catch (error) {  
             console.error('Error details:', error);  
             console.error('Error message:', error.message); 
-            dispatch(ChangeModalViewOpen())
             setMailSend(false)
+            dispatch(ChangeModalViewOpen())
         }  
     }
 
