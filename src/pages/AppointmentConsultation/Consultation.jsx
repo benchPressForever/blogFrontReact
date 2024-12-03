@@ -11,7 +11,7 @@ import { ChangeService } from "../../store/consReducer";
 export function Consultation(){
 
     const sendFeedback = async () => {
-        const baseUrl = "https://5a10-217-138-198-26.ngrok-free.app/feedback"
+        const baseUrl = "https://bede-176-59-55-250.ngrok-free.app/feedback"
         const dataToSend = {
             name: fio,
             phone: number,
