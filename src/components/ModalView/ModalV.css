@@ -49,3 +49,22 @@ h1,h2,h3,h4,h5,h6{
     background-color: white;
     color:gold;
 }
+
+
+.r{
+    color:#FF8080;
+}
+
+.rB{
+    border:2px solid #FF8080;
+    color:#FF8080;
+}
+
+.g{
+    color:#A5DD9B;
+}
+
+.gB{
+    border:2px solid #A5DD9B;
+    color:#A5DD9B;
+}

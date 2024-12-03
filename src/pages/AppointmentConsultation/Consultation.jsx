@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import { useMediaQuery } from "react-responsive";
 import { useDispatch, useSelector } from "react-redux";
-import { ChangeService } from "../../store/consReducer";
+import { ChangeModalViewOpen, ChangeService } from "../../store/consReducer";
 
 
 export function Consultation(){
@@ -21,11 +21,11 @@ export function Consultation(){
         }
         try {  
             await axios.post(baseUrl, dataToSend)  
-            alert("Письмо успешно отправлено!");
+            dispatch(ChangeModalViewOpen())
         } catch (error) {  
             console.error('Error details:', error);  
             console.error('Error message:', error.message); 
-            alert("ОШИБКА!\nПопробуйте позже")
+            dispatch(ChangeModalViewOpen())
         }  
     }
 
@@ -44,8 +44,6 @@ export function Consultation(){
     const {Service} = useSelector(state => state.Cons)
     const [message,setMessage] = React.useState('')
 
-    console.log(Service)
-
     const [fioDirty,setFioDirty] = React.useState(false);
     const [numberDirty,setNumberDirty] = React.useState(false);
     const [emailDirty,setEmailDirty] = React.useState(false)
@@ -59,6 +57,8 @@ export function Consultation(){
     const [messageError,setMessageError] = React.useState("Сообщение не может быть пустым")
 
     const [formValid,setFormValid] = React.useState(false)
+
+    
 
     const dispatch = useDispatch()
 
