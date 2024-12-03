@@ -6,6 +6,7 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } fro
 import { useMediaQuery } from "react-responsive";
 import { useDispatch, useSelector } from "react-redux";
 import { ChangeModalViewOpen, ChangeService } from "../../store/consReducer";
+import { ModalView } from "../../components/ModalView/ModalV";
 
 
 export function Consultation(){
@@ -41,7 +42,7 @@ export function Consultation(){
     const [fio,setFio] = React.useState("");
     const [number,setNumber] = React.useState("");
     const [email,setEmail] = React.useState("")
-    const {Service} = useSelector(state => state.Cons)
+    const {Service,ModalViewOpen} = useSelector(state => state.Cons)
     const [message,setMessage] = React.useState('')
 
     const [fioDirty,setFioDirty] = React.useState(false);
@@ -57,7 +58,6 @@ export function Consultation(){
     const [messageError,setMessageError] = React.useState("Сообщение не может быть пустым")
 
     const [formValid,setFormValid] = React.useState(false)
-
     
 
     const dispatch = useDispatch()
@@ -177,6 +177,8 @@ export function Consultation(){
                         </ScrollAnimation>
                     <img src = "img/13.png"  />
                 </div>
+
+                
 
                 <form  className = {S1 ? "formC formC1050" : "formC" } onSubmit={submitHandler}>
                         <input 
