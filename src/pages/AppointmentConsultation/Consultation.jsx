@@ -45,9 +45,10 @@ export function Consultation(){
 
         try {  
             const data = await axios.post(baseUrl, dataToSend) 
-            console.log(data)
-            setMailSend(true)
-            dispatch(ChangeModalViewOpen())
+            if(data.status == 200){
+                setMailSend(true)
+                dispatch(ChangeModalViewOpen())
+            }
         } catch (error) {  
             console.error('Error details:', error);  
             console.error('Error message:', error.message); 
