@@ -30,7 +30,7 @@ function App() {
   return (
     <div style = {{position:"relative"}}> 
 
-      {OpenModal ? <Modal/> : <Header/> }
+      {OpenModal ? <Modal/> : ModalViewOpen ? undefined : <Header/> }
 
       <Element name = {MAIN_ROUTE}>
         <WorkE/> 

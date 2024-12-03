@@ -3,6 +3,7 @@ import "./Contacts.css"
 import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import { ChangeOpenModal } from "../../store/consReducer";
+import { Center } from "@chakra-ui/react";
 
 export function Contacts(){
 
@@ -19,9 +20,7 @@ export function Contacts(){
                         </ScrollAnimation>
                     </div>
 
-                    <div className="lineImg">
-                        <a href="https://vk.com/id609725624"  target="_blank"><img src = "img/vk1.png"/></a>
-                    </div>
+    
                     <div className="RowDiv">
                         <img src = "img/telefone.png" />
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
@@ -41,6 +40,12 @@ export function Contacts(){
                         </ScrollAnimation>
                     </div>
                     <br/><br/>
+                    <div className="RowDiv">
+                        <a href="https://vk.com/id609725624" style = {{display:"flex",justifyContent:"center",alignItems:"center"}}  target="_blank"><img src = "img/vk1.png" style={{width:"40px" ,height:"40px"}}/>
+                        <ScrollAnimation animateIn="fadeIn" delay={300}>
+                            <p>Свяжитесь со мной в вк </p>
+                        </ScrollAnimation></a>
+                    </div>
 
 
                     

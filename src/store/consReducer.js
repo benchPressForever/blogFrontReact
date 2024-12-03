@@ -3,7 +3,7 @@ import { createAction, createReducer } from "@reduxjs/toolkit"
 const defaultState = {
     Service:"Банкротство",
     OpenModal:false,
-    ModalViewOpen:true
+    ModalViewOpen:false
 }
 
 export const ChangeService = createAction("CHANGE_SERVICE")

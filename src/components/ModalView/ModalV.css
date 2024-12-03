@@ -11,10 +11,10 @@
     align-items: center;
 }
 
-.modal{
-    width: auto;
-    height: 20vh;
-    padding: 3vw;
+.Modal{
+    width: 300px;
+    height: 150px;
+    padding: 10px;
     border-radius: 1vh;
     background-color: white;
     display: flex;
@@ -24,7 +24,6 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    color:gold;
     font-weight: 500;
   }
 
@@ -32,22 +31,40 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
 }
 
-.Button{
+.button{
     padding: 1% 2% 1% 2%;
     border-radius:10px;
-    background-color:gold;
+    background-color:#A5DD9B;
     color:white;
-    border:2px solid gold;
+    border:2px solid #A5DD9B;
     width:200px;
     height:auto;
     margin-top:3%;
     transition: 1s;
 }
 
-.Button:hover{
+.button:hover{
     transform: scale(1.1);
     background-color: white;
-    color:gold;
+    color:#A5DD9B;
+}
+
+.B{
+    padding: 1% 2% 1% 2%;
+    border-radius:10px;
+    background-color:#FF8080;
+    color:white;
+    border:2px solid #FF8080;
+    width:200px;
+    height:auto;
+    margin-top:3%;
+    transition: 1s;
+}
+
+.B:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color:#FF8080;
 }
 
 
@@ -55,16 +72,7 @@ h1,h2,h3,h4,h5,h6{
     color:#FF8080;
 }
 
-.rB{
-    border:2px solid #FF8080;
-    color:#FF8080;
-}
 
-.g{
-    color:#A5DD9B;
-}
-
-.gB{
-    border:2px solid #A5DD9B;
+.green{
     color:#A5DD9B;
 }

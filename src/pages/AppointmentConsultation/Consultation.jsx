@@ -23,10 +23,12 @@ export function Consultation(){
         try {  
             await axios.post(baseUrl, dataToSend)  
             dispatch(ChangeModalViewOpen())
+            setMailSend(true)
         } catch (error) {  
             console.error('Error details:', error);  
             console.error('Error message:', error.message); 
             dispatch(ChangeModalViewOpen())
+            setMailSend(false)
         }  
     }
 
@@ -58,7 +60,7 @@ export function Consultation(){
     const [messageError,setMessageError] = React.useState("Сообщение не может быть пустым")
 
     const [formValid,setFormValid] = React.useState(false)
-    
+    const [mailSend,setMailSend] = React.useState(false)
 
     const dispatch = useDispatch()
 
@@ -178,7 +180,7 @@ export function Consultation(){
                     <img src = "img/13.png"  />
                 </div>
 
-                
+                {ModalViewOpen ? <ModalView state = {false}/> : undefined}
 
                 <form  className = {S1 ? "formC formC1050" : "formC" } onSubmit={submitHandler}>
                         <input 
