@@ -11,7 +11,7 @@ import { ChangeService } from "../../store/consReducer";
 export function Consultation(){
 
     const sendFeedback = async () => {
-        const baseUrl = "https://form-to-mail.vercel.app/feedback"
+        const baseUrl = "https://formtomail-nicolas0708.amvera.io/feedback"
         const dataToSend = {
             name: fio,
             phone: number,

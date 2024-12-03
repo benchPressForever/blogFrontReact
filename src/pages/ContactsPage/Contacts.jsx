@@ -18,6 +18,10 @@ export function Contacts(){
                             <h1 className="H1">ГДЕ НАС НАЙТИ</h1>
                         </ScrollAnimation>
                     </div>
+
+                    <div className="lineImg">
+                        <a href="https://vk.com/id609725624"  target="_blank"><img src = "img/vk1.png"/></a>
+                    </div>
                     <div className="RowDiv">
                         <img src = "img/telefone.png" />
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
@@ -39,9 +43,7 @@ export function Contacts(){
                     <br/><br/>
 
 
-                    <div className="lineImg">
-                        <a href="https://vk.com/id609725624"  target="_blank"><img src = "img/vk1.png"/></a>
-                    </div>
+                    
                 </div>
 
                 <div className= {S1 ? "Map900" : "Map"}>

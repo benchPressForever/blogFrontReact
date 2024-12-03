@@ -12,10 +12,11 @@ import "./index.css"
 import { Modal } from "./components/ModalWindow/Modal";
 import { useSelector } from "react-redux";
 import React from "react";
+import { ModalView } from "./components/ModalView/ModalV";
 
 function App() {
 
-  const {OpenModal} = useSelector(state => state.Cons)
+  const {OpenModal,ModalViewOpen} = useSelector(state => state.Cons)
 
   React.useEffect(() => {
     if(OpenModal){
@@ -24,7 +25,7 @@ function App() {
     else{
         document.body.style.overflowY = "scroll"
     }
-  },[OpenModal]);
+  },[OpenModal,ModalViewOpen]);
 
   return (
     <div style = {{position:"relative"}}> 
