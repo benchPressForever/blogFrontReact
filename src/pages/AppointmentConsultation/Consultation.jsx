@@ -44,7 +44,8 @@ export function Consultation(){
         clear()
 
         try {  
-            await axios.post(baseUrl, dataToSend)  
+            const data = await axios.post(baseUrl, dataToSend) 
+            console.log(data)
             setMailSend(true)
             dispatch(ChangeModalViewOpen())
         } catch (error) {  
