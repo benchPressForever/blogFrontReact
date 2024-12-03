@@ -11,7 +11,7 @@ import { ChangeService } from "../../store/consReducer";
 export function Consultation(){
 
     const sendFeedback = async () => {
-        const baseUrl = "https://bede-176-59-55-250.ngrok-free.app/feedback"
+        const baseUrl = "https://form-to-mail.vercel.app/feedback"
         const dataToSend = {
             name: fio,
             phone: number,
@@ -21,11 +21,12 @@ export function Consultation(){
         }
         try {  
             await axios.post(baseUrl, dataToSend)  
+            alert("Письмо успешно отправлено!");
         } catch (error) {  
             console.error('Error details:', error);  
-            console.error('Error message:', error.message);   
+            console.error('Error message:', error.message); 
+            alert("ОШИБКА!\nПопробуйте позже")
         }  
-        alert("Письмо успешно отправлено!");
     }
 
     

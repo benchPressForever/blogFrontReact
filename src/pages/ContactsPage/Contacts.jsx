@@ -41,8 +41,6 @@ export function Contacts(){
 
                     <div className="lineImg">
                         <a href="https://vk.com/id609725624"  target="_blank"><img src = "img/vk1.png"/></a>
-                        <a href=""><img src = "img/watsap.png"  target="_blank"/></a>
-                        <a href=""  target="_blank"><img src = "img/telegram.png"/></a>  
                     </div>
                 </div>
 
