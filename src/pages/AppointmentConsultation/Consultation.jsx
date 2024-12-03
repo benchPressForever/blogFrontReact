@@ -31,39 +31,6 @@ export function Consultation(){
 
     }
 
-    const sendFeedback =  () => {
-        const baseUrl = "https://formtomail-nicolas0708.amvera.io/feedback"
-        const dataToSend = {
-            name: fio,
-            phone: number,
-            email: email,
-            type: Service,
-            message: message
-        }
-
-        clear()
-
-        try {  
-            const data =  axios.post(baseUrl, dataToSend) 
-            if(data.status == 200){
-                setMailSend(true)
-                dispatch(ChangeModalViewOpen())
-            }
-        } catch (error) {  
-            console.error('Error details:', error);  
-            console.error('Error message:', error.message); 
-            setMailSend(false)
-            dispatch(ChangeModalViewOpen())
-        }  
-    }
-
-    
-    const S1 = useMediaQuery({ maxWidth: 1050 });
-
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
-
 
 
     const [fio,setFio] = React.useState("");
@@ -97,6 +64,42 @@ export function Consultation(){
             setFormValid(true);
         }
     },[fioError,numberError,emailError,messageError,clickCheckBox]);
+
+
+
+    const sendFeedback =  () => {
+        const baseUrl = "https://formtomail-nicolas0708.amvera.io/feedback"
+        const dataToSend = {
+            name: fio,
+            phone: number,
+            email: email,
+            type: Service,
+            message: message
+        }
+
+        clear()
+
+        try {  
+            const data =  axios.post(baseUrl, dataToSend) 
+            if(data.status == 200){
+                setMailSend(true)
+                dispatch(ChangeModalViewOpen())
+            }
+        } catch (error) {  
+            console.error('Error details:', error);  
+            console.error('Error message:', error.message); 
+            setMailSend(false)
+            dispatch(ChangeModalViewOpen())
+        }  
+    }
+
+    
+    const S1 = useMediaQuery({ maxWidth: 1050 });
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
 
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -205,7 +208,7 @@ export function Consultation(){
                     <img src = "img/13.png"  />
                 </div>
 
-                {ModalViewOpen ? <ModalView state = {false}/> : undefined}
+                {ModalViewOpen ? <ModalView state = {ModalViewOpen}/> : undefined}
 
                 <form  className = {S1 ? "formC formC1050" : "formC" } onSubmit={submitHandler}>
                         <input 
