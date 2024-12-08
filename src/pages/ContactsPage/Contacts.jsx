@@ -62,6 +62,7 @@ export function Contacts(){
                             frameborder="1" 
                             allowfullscreen="" 
                             loading="lazy" 
+                            title="map"
                             referrerpolicy="no-referrer-when-downgrade"
                             style={{border:0}} ></iframe>
                 </div>
