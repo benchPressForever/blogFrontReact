@@ -48,7 +48,7 @@ export function Header(){
         <div className="headerDiv">
                 <a onClick={scrollToTop}>
                 <div className="divRow">
-                    <img style={{marginLeft:"2vw"}} src = "img/logo1.png" width={40} height={40}/>
+                    <img style={{marginLeft:"2vw"}} src = "img/logo1.png" width={40} height={40} alt = "Логотип"/>
                     <div style={{marginLeft:"2vw",fontWeight:500}}>Саенко Максим</div>
                 </div>
                 </a>
@@ -122,7 +122,7 @@ export function Header(){
                         duration={300} className="item">контакты</Link>
                 </>}
                 <a  onClick={scrollToBottom} style = {{position:"absolute",top:"2vh",right:"6vw"}}>
-                    <img src="img/strelka.png" width={"40px"} height={"auto"}/>
+                    <img src="img/strelka.png" width={"40px"} height={"auto"} alt = "стрелка вниз"/>
                 </a>
             </div>
             

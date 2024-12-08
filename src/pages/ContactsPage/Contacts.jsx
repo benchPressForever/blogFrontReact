@@ -3,7 +3,7 @@ import "./Contacts.css"
 import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import { ChangeOpenModal } from "../../store/consReducer";
-import { Center } from "@chakra-ui/react";
+
 
 export function Contacts(){
 

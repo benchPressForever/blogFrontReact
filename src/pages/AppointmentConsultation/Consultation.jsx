@@ -203,7 +203,7 @@ export function Consultation(){
                         <ScrollAnimation animateIn="fadeIn" delay={200}>
                             <h1>Записаться на консультацию</h1>
                         </ScrollAnimation>
-                    <img src = "img/13.png"  />
+                    <img src = "img/13.png" alt = "юриспруденция картинка" />
                 </div>
 
                 {ModalViewOpen ? <ModalView state = {ModalViewOpen}/> : undefined}

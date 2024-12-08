@@ -19,7 +19,7 @@ export function MyInfo(){
 
         {S3 ?
         <div className= {"secondBlock"} style = {{width:"100vw",height:"auto"}}>
-                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} />
+                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} alt = "Юрист - Саенко Максим"/>
         </div> : undefined}
 
         <div className= {S3 ? "firstBlock450" : "firstBlock"} >
@@ -55,7 +55,7 @@ export function MyInfo(){
         {S3 ? undefined :
 
         <div className= {"secondBlock"} >
-                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} />
+                <img style = {{objectFit:"cover"}} src="img/men.png" width={"100%"} height={"100%"} alt = "Юрист - Саенко Максим" />
         </div>}
 
 
