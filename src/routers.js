@@ -1,6 +1,5 @@
 import { Consultation } from "./pages/AppointmentConsultation/Consultation"
 import { Contacts } from "./pages/ContactsPage/Contacts"
-import { LegalA } from "./pages/LegalAssistance/LegalA"
 import { MyInfo } from "./pages/MyInfoPage/MyInfo"
 import { Services } from "./pages/ServicesPage/Services"
 import { CONSULTATION_ROUTE, CONTACTS_ROUTE, MAIN_ROUTE, MYINFO_ROUTE, SERVICES_ROUTE } from "./utils/constants"
@@ -19,10 +18,6 @@ export const publicRouters = [
     {
         path:MYINFO_ROUTE,
         Component:MyInfo
-    },
-    {
-        path:MAIN_ROUTE,
-        Component:LegalA
     },
     {
         path:CONSULTATION_ROUTE,
