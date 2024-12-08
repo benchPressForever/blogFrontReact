@@ -22,26 +22,27 @@ export function Contacts(){
 
     
                     <div className="RowDiv">
-                        <img src = "img/telefone.png" />
+                        <img src = "img/telefone.png" alt = "Номер телефона"/>
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
                             <p>+7-910-210-96-94</p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
-                        <img src="img/map.png" />
+                        <img src="img/map.png" alt  = "карта" />
                         <ScrollAnimation animateIn="fadeIn" delay={400}>
                             <p>Российская Федерация, 305007, город Курск ул. Дейнеки д. 5е к.7</p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
-                        <img src = "img/email.png"/>
+                        <img src = "img/email.png" alt = "Почта"/>
                         <ScrollAnimation animateIn="fadeIn" delay={500}>
                             <p>Saenko-kursk@mail.ru</p>
                         </ScrollAnimation>
                     </div>
                     <br/><br/>
                     <div className="RowDiv">
-                        <a href="https://vk.com/id609725624" style = {{display:"flex",justifyContent:"center",alignItems:"center"}}  target="_blank"><img src = "img/vk1.png" style={{width:"40px" ,height:"40px"}}/>
+                        <a href="https://vk.com/id609725624" style = {{display:"flex",justifyContent:"center",alignItems:"center"}}  target="_blank">
+                        <img src = "img/vk1.png" style={{width:"40px" ,height:"40px"}} alt = "вконтакте Саенко Максим"/>
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
                             <p>Свяжитесь со мной в вк </p>
                         </ScrollAnimation></a>
