@@ -11,7 +11,7 @@ export function Contacts(){
     const S1 = useMediaQuery({ maxWidth: 900 });
 
     return(
-        <div className="MainDivContacts">
+        <footer className="MainDivContacts">
             <div className="firstDivContacts">
                 <div className= {S1 ? "DivContacts900" : "DivContacts"}>
                     <div style = {{width:"min-content"}}> 
@@ -66,6 +66,6 @@ export function Contacts(){
             <div className="lastDivContacts">
                 <p>Саенко Максим ©, 2024 </p> <p style = {{marginRight:"1vw",marginLeft:"1vw"}}>|</p> <p className="pol" onClick={() => dispatch(ChangeOpenModal())}>Политика конфиденциальности</p>
             </div>
-        </div>
+        </footer>
     );
 }

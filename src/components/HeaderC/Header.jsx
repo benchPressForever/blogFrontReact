@@ -45,7 +45,7 @@ export function Header(){
       };
 
     return(
-        <div className="headerDiv">
+        <header className="headerDiv">
                 <div className="divRow" onClick={scrollToTop}>
                     <img style={{marginLeft:"2vw"}} src = "img/logo1.png" width={40} height={40} alt = "Логотип"/>
                     <div style={{marginLeft:"2vw",fontWeight:500}}>Саенко Максим</div>
@@ -127,6 +127,6 @@ export function Header(){
 
 
 
-        </div>
+        </header>
     );
 }
