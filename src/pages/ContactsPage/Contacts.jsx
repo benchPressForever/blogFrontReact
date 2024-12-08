@@ -24,7 +24,7 @@ export function Contacts(){
                     <div className="RowDiv">
                         <img src = "img/telefone.png" alt = "Номер телефона"/>
                         <ScrollAnimation animateIn="fadeIn" delay={300}>
-                            <p>+7-910-210-96-94</p>
+                            <p><a href="tel:+79102109694">+7-910-210-96-94</a></p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
@@ -36,7 +36,7 @@ export function Contacts(){
                     <div className="RowDiv">
                         <img src = "img/email.png" alt = "Почта"/>
                         <ScrollAnimation animateIn="fadeIn" delay={500}>
-                            <p>Saenko-kursk@mail.ru</p>
+                            <p><a href="mailto:Saenko-kursk@mail.ru">Saenko-kursk@mail.ru</a></p>
                         </ScrollAnimation>
                     </div>
                     <br/><br/>
