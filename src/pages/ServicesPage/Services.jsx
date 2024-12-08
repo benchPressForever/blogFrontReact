@@ -22,9 +22,9 @@ export function Services(){
         <div className="ServicesDiv">
             
             <h1 style = {{textAlign:S3 ? "center" :"start"}}>Мои услуги</h1>
-            <div className="firstServiceBlock" >
+            <div className="firstServiceBlock" itemscope itemtype="http://schema.org/Organization">
                 {servicesArr.map((e) => 
-                    <Service  key = {e.id} Url = {e.url} Title={e.title} Text = {e.text}/>)}
+                    <Service itemprop = {e.title}  key = {e.id} Url = {e.url} Title={e.title} Text = {e.text}/>)}
             </div>
         </div>
     );
