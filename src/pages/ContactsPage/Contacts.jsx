@@ -30,7 +30,10 @@ export function Contacts(){
                     <div className="RowDiv">
                         <img src="img/map.png" alt  = "карта" />
                         <ScrollAnimation animateIn="fadeIn" delay={400}>
-                            <p>Российская Федерация, 305007, город Курск ул. Дейнеки д. 5е к.7</p>
+                            <p>
+                                <a href = "https://yandex.ru/maps/8/kursk/house/ulitsa_deyneki_5ye/Z08YdwNhT0QEQFtrfXtxeXplZg==/?ll=36.141613%2C51.708663&source=serp_navig&z=16.62">   
+                                Российская Федерация, 305007, город Курск ул. Дейнеки д. 5е к.7</a>
+                            </p>
                         </ScrollAnimation>
                     </div>
                     <div className="RowDiv">
@@ -53,13 +56,14 @@ export function Contacts(){
                 </div>
 
                 <div className= {S1 ? "Map900" : "Map"}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.420550361664!2d36.138597755859976!3d51.70847286760802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412f033bf6c76e5b%3A0x4f4c9a1633f5ff8!2z0YPQuy4g0JTQtdC50L3QtdC60LgsIDXQlSwg0JrRg9GA0YHQuiwg0JrRg9GA0YHQutCw0Y8g0L7QsdC7LiwgMzA1MDA3!5e0!3m2!1sru!2sru!4v1732985865604!5m2!1sru!2sru" 
-                                width="100%" 
-                                height="100%" 
-                                style={{border:0}} 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=36.141613%2C51.708663&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQ2ODAwMBKUAdCg0L7RgdGB0LjRjywg0JrRg9GA0YHQuiwg0LzQuNC60YDQvtGA0LDQudC-0L0g0JrRg9GA0YHQutC-0LPQviDQl9Cw0LLQvtC00LAg0KLRgNCw0LrRgtC-0YDQvdGL0YUg0JfQsNC_0YfQsNGB0YLQtdC5LCDRg9C70LjRhtCwINCU0LXQudC90LXQutC4LCA10JUiCg0EkRBCFazVTkI%2C&z=16.54" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="1" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            style={{border:0}} ></iframe>
                 </div>
             </div>
 
