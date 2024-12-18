@@ -68,7 +68,6 @@ export function Consultation(){
 
 
     const sendFeedback = async () => {
-        const baseUrl = "https://formtomail-nicolas0708.amvera.io/feedback"
         const dataToSend = {
             name: fio,
             phone: number,
@@ -80,7 +79,7 @@ export function Consultation(){
         clear()
 
         try {  
-            await axios.post(baseUrl, dataToSend) 
+            await axios.post(process.env.REACT_APP_BASE_URL + "/feedback", dataToSend) 
             setMailSend(true)
             dispatch(ChangeModalViewOpen())
         } catch (error) {  
