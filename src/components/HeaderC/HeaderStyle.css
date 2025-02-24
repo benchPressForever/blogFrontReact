@@ -33,7 +33,7 @@
     margin-left: 4vh;
     transition: 1s; 
     text-align: center;
-    border-bottom: 0 solid gold; /* Параметры линии снизу */
+    border-bottom: 0 solid #34abdf; /* Параметры линии снизу */
     transition: 0.2s;
     color: inherit; /* Цвет текста ссылки */
     text-decoration: none; /* Убирает подчёркивание под текстом */
@@ -56,14 +56,14 @@ li , li:active , li:visited ,li:hover{
 }
 
 .dropdown-item.active{
-    background-color: gold;
+    background-color: #34abdf;
 }
 
 
 .dropdown-item:hover {
-    background-color: gold;
+    background-color: #34abdf;
     }
     
 .dropdown-item.active, .dropdown-item:active {
-    background-color: gold;
+    background-color: #34abdf;
 }

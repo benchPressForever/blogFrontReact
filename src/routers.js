@@ -1,27 +1,21 @@
-import { Consultation } from "./pages/AppointmentConsultation/Consultation"
-import { Contacts } from "./pages/ContactsPage/Contacts"
-import { MyInfo } from "./pages/MyInfoPage/MyInfo"
-import { Services } from "./pages/ServicesPage/Services"
-import { CONSULTATION_ROUTE, CONTACTS_ROUTE, MAIN_ROUTE, MYINFO_ROUTE, SERVICES_ROUTE } from "./utils/constants"
-
-
+import { Component } from "react"
+import { NotFound } from "./components/NotFound/NotFound"
+import {POST_ROUTE, POSTS_ROUTE } from "./utils/constants"
+import { PostsPage } from "./pages/PostsPage/Posts"
+import { Post } from "./components/Post/Post"
 
 export const publicRouters = [
     {
-        path:CONTACTS_ROUTE,
-        Component:Contacts
+        path:POST_ROUTE + '/:id',
+        Component:Post
     },
     {
-        path:SERVICES_ROUTE,
-        Component:Services
+        path:POSTS_ROUTE,
+        Component:PostsPage
     },
     {
-        path:MYINFO_ROUTE,
-        Component:MyInfo
-    },
-    {
-        path:CONSULTATION_ROUTE,
-        Component:Consultation
-    },
+        path:'*',
+        Component:NotFound
+    }
 
 ]
