@@ -1,8 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { serviceReducer } from "./consReducer";
+import { postReducer} from "./postsReducer";
+import { userReducer } from "./userReducer";
+import { categoryReducer } from "./categoryReducer";
+
 
 export const store = configureStore({
     reducer:{
-        Cons:serviceReducer,
+        Post:postReducer,
+        User:userReducer,
+        Category:categoryReducer
     }
 })

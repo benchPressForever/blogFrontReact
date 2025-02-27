@@ -39,3 +39,14 @@ a:hover, a:active {
 
   }
 }
+
+.content{
+  position: relative;
+  height: 100%;
+  min-height: 720px;
+}
+
+.content h1 {
+    margin: 0;
+    margin-bottom: 40px;
+}

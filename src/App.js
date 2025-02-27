@@ -18,8 +18,9 @@ function App() {
     <div style = {{position:"relative"}}> 
 
       <Header/>
-
-      <AppRouter/>
+      <div className="content">
+        <AppRouter/>
+      </div>
 
       <Footer/>
    
